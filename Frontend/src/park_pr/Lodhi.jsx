@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Parking.css';
+import './parking.css';
 import { FaCar, FaParking, FaClock, FaTimes, FaCheck } from 'react-icons/fa';
 
 const Lodhi = () => {
@@ -14,7 +14,7 @@ const Lodhi = () => {
   useEffect(() => {
     const fetchParkingSlots = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/parking/slots');
+        const response = await fetch('https://parking-zizn.onrender.com/api/parking/slots');
         if (!response.ok) throw new Error('Failed to fetch parking slots');
         const data = await response.json();
         setParkingSlots(data);
@@ -43,7 +43,7 @@ const Lodhi = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:3000/api/parking/book', {
+      const response = await fetch('https://parking-zizn.onrender.com/api/parking/book', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

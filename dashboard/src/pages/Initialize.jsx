@@ -15,7 +15,7 @@ const Initialize = () => {
     setMessage('');
 
     try {
-      const response = await fetch('http://localhost:3000/api/parking/initialize', {
+      const response = await fetch('https://parking-zizn.onrender.com/api/parking/initialize', {
         method: 'POST',
       });
 

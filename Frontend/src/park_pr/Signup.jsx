@@ -29,7 +29,7 @@ function Signup() {
     }
 
     try {
-      const response = await axios.post("http://localhost:3000/auth/register", formData);
+      const response = await axios.post("https://parking-zizn.onrender.com/auth/register", formData);
       const { success, message, error } = response.data;
 
       if (success) {
